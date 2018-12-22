@@ -16,3 +16,10 @@ function startGame() {
         wordList = ["BAT MAN", "AQUA MAN", "HIT GIRL", "SPIDER GIRL", "SPIDER WOMAN", "THOR", "HE-MAN", "PLASTIC MAN", "STATIC SHOCK", "ELONGATED MAN", "SPIDER GWEN", "BLACK SCORPIAN", "DARE DEVIL", "JESSICA JONES"];
     }
     
+function startGame() {}
+
+function promptUser() {}
+
+function checkAnswer(data) {}
+
+function rightGuess() {}

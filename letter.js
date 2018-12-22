@@ -1,4 +1,4 @@
-//Letter constructor, 'displayLet" will display an underscore or letter or blank (if the word to be guessed has a space)
+//Letter constructor, 'displayLet" will display either an underscore or letter or blank ( the word guessed has a space)
 //'check' function changes boolean so the letter will display if it's guessed
 function Letter(alpha) {
     this.alpha = alpha;
