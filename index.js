@@ -52,7 +52,26 @@ function promptUser() {
     }
 }
 
-function checkAnswer(data) {}
+function checkAnswer(data) {
+    if ((data.letter.length === 1) && /^[a-zA-Z]+$/.test(data.letter)) {
+        var checkable = data.letter.toUpperCase();
+        var temp = gameWord.showWord();
+        gameWord.checkGuess(checkable);
+        if (temp === gameWord.showWord()) {
+            console.log("\nSorry, wrong letter!\n".yellow);
+            counter++;
+            console.log(((8 - counter) + " guesses remaining").yellow);
+            promptUser();
+        }
+        else {
+            rightGuess();
+        }
+    }
+    else {
+        console.log("\nPlease enter a letter, one at a time.\n".yellow);
+        promptUser();
+    }
+}
 
 function rightGuess() {}
 
