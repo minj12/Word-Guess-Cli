@@ -22,7 +22,7 @@ function startGame() {
     if (select > -1) {
         wordList.splice(select, 1);
     }
-    console.log("\nYou get 8 letter guesses to find the Mario character.\n".cyan)
+    console.log("\nYou get 8 letter guesses to figure out the super hero.\n")
     promptUser();
 }
 
