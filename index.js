@@ -73,7 +73,22 @@ function checkAnswer(data) {
     }
 }
 
-function rightGuess() {}
+function rightGuess() {
+    console.log("\nYou guessed correctly.\n".green);
+    if (chosenWord.replace(/ /g,"") == (gameWord.showWord()).replace(/ /g,"")) {
+        console.log(gameWord.showWord().america);
+        console.log('\nYou win!!\n'.america);
+        chosenWord = "";
+        gameWord = "";
+        select = 0;
+        counter = 0;
+        startGame();
+    }
+    else {
+        promptUser();
+    }
+}
 
+startGame();
 
 
