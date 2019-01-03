@@ -1,9 +1,8 @@
 //NPM modules to obtain player/'s input (letter guesses) and also add color to the display
 var Word = require("./word.js");
 var inquirer = require('inquirer');
-var colors = require('colors');
 
-wordList = ["BAT MAN", "AQUA MAN", "HIT GIRL", "SPIDER GIRL", "SPIDER WOMAN", "THOR", "HE-MAN", "PLASTIC MAN", "STATIC SHOCK", "ELONGATED MAN", "SPIDER GWEN", "BLACK SCORPIAN", "DARE DEVIL", "JESSICA JONES"];
+wordList = ["BAT MAN", "AQUA MAN", "HIT GIRL", "SPIDER GIRL", "SPIDER WOMAN", "THOR", "HE MAN", "PLASTIC MAN", "STATIC SHOCK", "ELONGATED MAN", "SPIDER GWEN", "BLACK SCORPIAN", "DARE DEVIL", "JESSICA JONES"];
 var select = 0;
 var chosenWord = "";
 var gameWord = "";
@@ -13,7 +12,7 @@ var counter = 0;
 //'chosenWord' is used for comparison later to check if the word is solved
 function startGame() {
     if (wordList.length<2) {
-        wordList = ["BAT MAN", "AQUA MAN", "HIT GIRL", "SPIDER GIRL", "SPIDER WOMAN", "THOR", "HE-MAN", "PLASTIC MAN", "STATIC SHOCK", "ELONGATED MAN", "SPIDER GWEN", "BLACK SCORPIAN", "DARE DEVIL", "JESSICA JONES"];
+        wordList = ["BAT MAN", "AQUA MAN", "HIT GIRL", "SPIDER GIRL", "SPIDER WOMAN", "THOR", "HE MAN", "PLASTIC MAN", "STATIC SHOCK", "ELONGATED MAN", "SPIDER GWEN", "BLACK SCORPIAN", "DARE DEVIL", "JESSICA JONES"];
     }
      select = Math.floor(Math.random()*wordList.length);
     chosenWord = wordList[select];
@@ -52,6 +51,7 @@ function promptUser() {
     }
 }
 
+//Function to check if answer correct or incorrect
 function checkAnswer(data) {
     if ((data.letter.length === 1) && /^[a-zA-Z]+$/.test(data.letter)) {
         var checkable = data.letter.toUpperCase();
@@ -74,7 +74,7 @@ function checkAnswer(data) {
 }
 
 function rightGuess() {
-    console.log("\nYou guessed correctly.\n".green);
+    console.log("\nYou guessed correctly.\n");
     if (chosenWord.replace(/ /g,"") == (gameWord.showWord()).replace(/ /g,"")) {
         console.log(gameWord.showWord().america);
         console.log('\nYou win!!\n'.america);

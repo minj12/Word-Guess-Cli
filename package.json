@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/minj12/Word-Guess-Cli/issues"
   },
-  "homepage": "https://github.com/minj12/Word-Guess-Cli#readme"
+  "homepage": "https://github.com/minj12/Word-Guess-Cli#readme",
+  "dependencies": {
+    "inquirer": "^6.2.1"
+  }
 }
